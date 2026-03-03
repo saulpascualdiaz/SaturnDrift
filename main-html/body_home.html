@@ -1,0 +1,135 @@
+<div class="hero-container">
+    <div class="hero-content">
+        <h1 class="hero-title">this is where i keep my visual notes.</h1>
+        <p class="hero-description">
+            small, unpolished moments where 
+            <span class="glitch-wrapper">
+                <span class="ghost-word">randomness</span>
+                <span id="glitch-word" class="highlight">randomness</span>
+            </span> 
+            feels intentional.
+        </p>
+        <div class="hero-navigation">
+            <a href="/gallery" class="hero-link">archive <span class="arrow">→</span></a>
+        </div>
+    </div>
+</div>
+
+<script>
+    const words = ['atzar', 'azar', '무작위'];
+    const original = 'randomness';
+    
+    setInterval(function() {
+        const el = document.getElementById('glitch-word');
+        if (!el) return;
+        el.innerText = words[Math.floor(Math.random() * words.length)];
+        setTimeout(function() {
+            el.innerText = original;
+        }, 500);
+    }, 6000);
+</script>
+
+<style>
+.hero-container {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    padding-left: 10%;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+html.night-mode .hero-container {
+    background-color: #f0f0f0;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: #000 !important;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -2px;
+}
+
+.hero-description {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: clamp(18px, 4vw, 22px);
+    color: #666 !important;
+    line-height: 1.4;
+    margin-bottom: 35px;
+    transition: color 0.3s ease;
+}
+
+html.night-mode .hero-description {
+    color: #555 !important;
+}
+
+.glitch-wrapper {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ghost-word {
+    visibility: hidden;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.highlight {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #a389d4 !important;
+    font-weight: 600;
+    white-space: nowrap;
+    width: 100%;
+    text-align: left;
+}
+
+.hero-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none !important;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #a389d4 !important;
+    transition: opacity 0.3s ease;
+}
+
+.hero-link:hover {
+    opacity: 0.7;
+}
+
+.arrow {
+    margin-left: 10px;
+    transition: transform 0.4s ease;
+}
+
+.hero-link:hover .arrow {
+    transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        padding-left: 30px;
+        padding-right: 30px;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    .hero-title {
+        font-size: 32px;
+    }
+}
+</style>
