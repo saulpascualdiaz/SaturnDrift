@@ -1,0 +1,89 @@
+<style>
+/* 1. RESET & FULL WIDTH FORCE */
+.elementor-widget-image-gallery, 
+.elementor-widget-container,
+.gallery {
+    max-width: none !important;
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    
+    /* FIX: This creates the necessary space for your HTML Header */
+    margin-top: 20px !important; 
+}
+
+.gallery-item {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+}
+
+/* 2. LANDSCAPE IMAGE SETUP */
+.gallery-item img {
+    width: 100% !important;
+    height: 380px !important; 
+    object-fit: cover !important;
+    display: block !important;
+    transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    filter: grayscale(10%) brightness(0.95);
+}
+
+html.night-mode .gallery-item img {
+    filter: grayscale(10%) brightness(0.88);
+}
+
+/* 3. MINIMALIST HOVER EFFECT */
+.gallery-item:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0%) brightness(1.05);
+    cursor: pointer;
+}
+
+html.night-mode .gallery-item:hover img {
+    filter: grayscale(0%) brightness(0.98);
+}
+
+/* 4. CAPTION ARCHIVE LOOK (Single Line - Tech Gray) */
+.wp-caption-text.gallery-caption {
+    text-transform: lowercase !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    font-size: 12px !important;
+    letter-spacing: 0.02em !important;
+    color: #9494a3 !important;
+    padding: 12px 25px 35px 25px !important;
+    text-align: left !important;
+    transition: all 0.3s ease;
+}
+
+html.night-mode .wp-caption-text.gallery-caption {
+    color: #7a7a8a !important;
+}
+
+.gallery-caption strong {
+    color: #222 !important;
+    font-weight: 700 !important;
+    margin-right: 6px !important;
+    transition: color 0.3s ease;
+}
+
+html.night-mode .gallery-caption strong {
+    color: #444 !important;
+}
+
+/* Hover effect on the whole item highlights the text */
+.gallery-item:hover .gallery-caption strong {
+    color: #a389d4 !important; /* Saturn Purple accent */
+}
+
+/* 5. RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+    .gallery-item img { height: 300px !important; }
+    .gallery { margin-top: 80px !important; }
+}
+
+@media (max-width: 767px) {
+    .gallery-item img { height: 250px !important; }
+    .gallery { margin-top: 60px !important; }
+    .gallery-caption { padding: 12px 15px 30px 15px !important; }
+}
+</style>
