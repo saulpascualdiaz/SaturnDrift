@@ -1,0 +1,136 @@
+{
+  "groups": [
+    {
+      "title": "gateway / rhythm / shelter",
+      "date": "2025-11",
+      "year": "2025",
+      "location": "korea",
+      "locationDisplay": "한국",
+      "country": "kr",
+      "images": [
+        {
+          "title": "gateway",
+          "location": "전주"
+        },
+        {
+          "title": "rhythm",
+          "location": "전주"
+        },
+        {
+          "title": "shelter",
+          "location": "전주"
+        }
+      ]
+    },
+    {
+      "title": "votive / omen / ember",
+      "date": "2025-12",
+      "year": "2025",
+      "location": "korea",
+      "locationDisplay": "한국",
+      "country": "kr",
+      "images": [
+        {
+          "title": "votive",
+          "location": "불국사"
+        },
+        {
+          "title": "omen",
+          "location": "불국사"
+        },
+        {
+          "title": "ember",
+          "location": "불국사"
+        }
+      ]
+    },
+    {
+      "title": "stasis / scatter / frame",
+      "date": "2025-12",
+      "year": "2025",
+      "location": "korea",
+      "locationDisplay": "한국",
+      "country": "kr",
+      "images": [
+        {
+          "title": "stasis",
+          "location": "대릉원"
+        },
+        {
+          "title": "scatter",
+          "location": "대릉원"
+        },
+        {
+          "title": "frame",
+          "location": "대릉원"
+        }
+      ]
+    },
+    {
+      "title": "torsion / frequency / resonance",
+      "date": "2026-01",
+      "year": "2026",
+      "location": "korea",
+      "locationDisplay": "한국",
+      "country": "kr",
+      "images": [
+        {
+          "title": "torsion",
+          "location": "태백산"
+        },
+        {
+          "title": "frequency",
+          "location": "태백산"
+        },
+        {
+          "title": "resonance",
+          "location": "태백산"
+        }
+      ]
+    },
+    {
+      "title": "drift / sentry / imeru",
+      "date": "2026-02",
+      "year": "2026",
+      "location": "japan",
+      "locationDisplay": "日本",
+      "country": "jp",
+      "images": [
+        {
+          "title": "drift",
+          "location": "紋別"
+        },
+        {
+          "title": "sentry",
+          "location": "紋別"
+        },
+        {
+          "title": "imeru",
+          "location": "紋別"
+        }
+      ]
+    },
+    {
+      "title": "cocytus / continuum / caldera",
+      "date": "2026-02",
+      "year": "2026",
+      "location": "japan",
+      "locationDisplay": "日本",
+      "country": "jp",
+      "images": [
+        {
+          "title": "cocytus",
+          "location": "登別"
+        },
+        {
+          "title": "continuum",
+          "location": "洞爺湖"
+        },
+        {
+          "title": "caldera",
+          "location": "洞爺湖"
+        }
+      ]
+    }
+  ]
+}
