@@ -1,0 +1,83 @@
+<header class="site-header">
+    <a href="/" class="logo-text">saturn 🪐 drift</a>
+    <span class="metadata">loc: suwon, kr // 37.26° n</span>
+    <nav class="garden-nav">
+        <a href="/gallery">archive</a>
+    </nav>
+</header>
+
+<script>
+    function setNightMode() {
+        const hour = new Date().getHours();
+        const isNight = hour >= 22 || hour < 6;
+        if (isNight) {
+            document.documentElement.classList.add('night-mode');
+        } else {
+            document.documentElement.classList.remove('night-mode');
+        }
+    }
+    setNightMode();
+    setInterval(setNightMode, 60000);
+</script>
+
+<style>
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 5%;
+    border-bottom: 1px solid #f0f0f0;
+    transition: border-color 0.3s ease;
+}
+
+html.night-mode .site-header {
+    border-bottom-color: #e0e0e0;
+}
+
+.logo-text {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -1px;
+    color: #a389d4;
+    text-decoration: none;
+}
+
+.metadata {
+    flex: 1;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #999;
+    text-align: center;
+}
+
+.garden-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.garden-nav a {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.garden-nav a:hover {
+    color: #a389d4;
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .metadata { display: none; }
+    .garden-nav { display: none; }
+}
+</style>
